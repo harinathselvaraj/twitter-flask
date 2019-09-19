@@ -1,10 +1,9 @@
 import mysql.connector
 from mysql.connector import Error
 import tweepy
-import json
+# import json
 from dateutil import parser
 import time
-import os
 limit = 10
 current = 0
 consumer_key = 'Qx4adEOddt583YhzX3bxC8FD5'

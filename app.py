@@ -29,7 +29,7 @@ def start():
 def get_data():
     engine = create_engine("mysql+pymysql://twitterusr:twitterpwd@321@166.62.26.1/harrytwitterdb")    
     twitterdata = pd.read_sql_query("select * from twitterdata", engine)
-   #  drugs['rr_start'] = drugs['rr_start'].apply(pd.to_datetime)
+    # drugs['rr_start'] = drugs['rr_start'].apply(pd.to_datetime)
     # drugs['eu_market'] =  pd.to_datetime(drugs['eu_market'], format='%Y-%m-%d')
     # drugs['rr_outcome'] = drugs['rr_outcome'].str.lower().str.replace('.','').str.replace('\n','').str.replace('a full','full').str.strip()
 
