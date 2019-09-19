@@ -25,7 +25,8 @@ def hello():
 @app.route('/start')
 def start():
    TwitterMySQLserver.start()
-   return "Loading tweets..Please wait for 5 seconds"
+   return render_template("home.html")
+#    return "Loading tweets..Please wait for 5 seconds"
 
 def get_data():
     engine = create_engine("mysql+pymysql://twitterusr:twitterpwd@321@166.62.26.1/harrytwitterdb")    

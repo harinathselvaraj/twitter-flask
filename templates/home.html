@@ -39,13 +39,15 @@
   <!-- Main jumbotron for a primary marketing message or call to action -->
   <div class="jumbotron">
     <div class="container">
+      <form action="/start" method="post">
       <h1 class="display-3">Twitter Tweets <span style="font-size:20pt;"><i>by <a target="_new" href="http://www.harinathselvaraj.com/">Harinath</a></i></span></h1>
       <p>This is a application written in Python to obtain tweets from Twitter for the given keyword. Please enter the keywords seperated by comma. eg) Tesla, Microsoft. Don't forget to kill the process</p>
       <div class="form-group">
         <label for="exampleFormControlInput1">Twitter Keywords</label>
         <input type="text" required class="form-control" id="exampleFormControlInput1" placeholder="Tesla, Microsoft">
       </div>
-      <p><button class="btn btn-primary btn-lg" href="/start">Start Downloading »</button></p>
+      <p><button type="submit" class="btn btn-primary btn-lg">Start Downloading »</button></p>
+    </form>
     <!-- <p><button class="btn btn-danger btn-lg" href="/stop">Stop Downloading »</button></p> -->
     <p><button class="btn btn-secondary btn-lg" href="/data">View data »</button></p>
 
