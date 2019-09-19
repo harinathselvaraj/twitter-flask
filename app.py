@@ -2,6 +2,7 @@ from flask import Flask, render_template, send_file
 import pandas as pd
 from sqlalchemy import create_engine
 import numpy as np
+import pymysql
 # import datetime
 # import matplotlib.pyplot as plt
 # import seaborn as sns
