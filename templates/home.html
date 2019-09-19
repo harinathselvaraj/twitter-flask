@@ -46,7 +46,7 @@
         <label for="exampleFormControlInput1">Twitter Keywords</label>
         <input type="email" required class="form-control" id="exampleFormControlInput1" placeholder="Tesla, Microsoft">
       </div>
-      <p><button class="btn btn-primary btn-lg" onclick="start()" href="#" type="submit">Start Downloading »</button></p>
+      <p><button class="btn btn-primary btn-lg" href="/start" type="submit">Start Downloading »</button></p>
     </form>
     <p><button class="btn btn-danger btn-lg" onclick="stop()" href="#" type="submit">Stop Downloading »</button></p>
     <p><button class="btn btn-secondary btn-lg" onclick="clear()" href="#" type="submit">Clear existing data »</button></p>
@@ -110,11 +110,11 @@
 <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
       <script>window.jQuery || document.write('<script src="/docs/4.3/assets/js/vendor/jquery-slim.min.js"><\/script>')</script><script src="/docs/4.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous"></script> -->
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-<script>
+<!-- <script>
     function start() {
         $.ajax({
             type: "POST",
-            url: "TwitterMySQL.py",
+            url: "https://harrytwitterdata.herokuapp.com://TwitterMySQL.py",
             data: { 
                 // param: text
                 }
@@ -123,6 +123,6 @@
           });
     }
 
-</script>
+</script> -->
 
 </body><span class="gr__tooltip"><span class="gr__tooltip-content"></span><i class="gr__tooltip-logo"></i><span class="gr__triangle"></span></span></html>
