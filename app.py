@@ -29,7 +29,7 @@ def get_data():
     # drugs['eu_market'] =  pd.to_datetime(drugs['eu_market'], format='%Y-%m-%d')
     # drugs['rr_outcome'] = drugs['rr_outcome'].str.lower().str.replace('.','').str.replace('\n','').str.replace('a full','full').str.strip()
 
-    return drugs
+    return twitterdata
 
 @app.route("/start")
 def get_dataframe():
