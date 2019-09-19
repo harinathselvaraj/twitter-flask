@@ -1,7 +1,12 @@
 import mysql.connector
 from mysql.connector import Error
 import tweepy
-# import json
+import json
+try:
+    import json
+except ImportError:
+    import simplejson as json
+# import simplejson as json
 from dateutil import parser
 import time
 limit = 10
@@ -108,6 +113,20 @@ if __name__== '__main__':
 	# time.sleep(2)
 
 	# authentification so we can access twitter
+	auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
+	auth.set_access_token(access_token, access_token_secret)
+	api =tweepy.API(auth, wait_on_rate_limit=True)
+
+	# create instance of Streamlistener
+	listener = Streamlistener(api = api)
+	stream = tweepy.Stream(auth, listener = listener)
+
+	track = ['modi','tamil']
+	#track = ['nba', 'cavs', 'celtics', 'basketball']
+	# choose what we want to filter by
+	stream.filter(track = track, languages = ['en'])
+
+def start():
 	auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
 	auth.set_access_token(access_token, access_token_secret)
 	api =tweepy.API(auth, wait_on_rate_limit=True)
