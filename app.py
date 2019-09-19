@@ -24,7 +24,7 @@ def hello():
 
 @app.route('/start')
 def start():
-   TwitterMySQLserver
+   TwitterMySQLserver()
    return "Loading tweets..Please wait for 5 seconds"
 
 def get_data():
