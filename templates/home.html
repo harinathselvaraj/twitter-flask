@@ -39,68 +39,22 @@
   <!-- Main jumbotron for a primary marketing message or call to action -->
   <div class="jumbotron">
     <div class="container">
-      <form action="/start" method="post">
+      <!-- <form action="/start" method="post"> -->
       <h1 class="display-3">Twitter Tweets <span style="font-size:20pt;"><i>by <a target="_new" href="http://www.harinathselvaraj.com/">Harinath</a></i></span></h1>
-      <p>This is a application written in Python to obtain tweets from Twitter for the given keyword. Please enter the keywords seperated by comma. eg) Tesla, Microsoft. Don't forget to kill the process</p>
+      <p>This is a application written in Python to obtain current 10 tweets from Twitter for the keywords - 'Trump' and 'NASA'. Please wait for 10 seconds after clicking 'Start Downloading' button.
+        Please click 'View data' to see the downloaded data.
+        <!-- Please enter the keywords seperated by comma. eg) Tesla, Microsoft. Don't forget to kill the process</p>
       <div class="form-group">
         <label for="exampleFormControlInput1">Twitter Keywords</label>
         <input type="text" required class="form-control" id="exampleFormControlInput1" placeholder="Tesla, Microsoft">
-      </div>
-      <p><button type="submit" class="btn btn-primary btn-lg">Start Downloading »</button></p>
+      </div> -->
+      <p><a href="/start" class="btn btn-primary btn-lg">Start Downloading »</a></p>
     </form>
     <!-- <p><button class="btn btn-danger btn-lg" href="/stop">Stop Downloading »</button></p> -->
     <p><button class="btn btn-secondary btn-lg" href="/data">View data »</button></p>
 
     </div>
   </div>
-
-  <div class="container">
-    <!-- Example row of columns -->
-    <div class="row">
-            <table class="table table-hover">
-                    <thead>
-                      <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">Username</th>
-                        <th scope="col">Tweet</th>
-                        <th scope="col">Created At</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <th scope="row">$id</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">2</th>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
-                      </tr>
-                    </tbody>
-                  </table>
-      <!-- <div class="col-md-4">
-        <h2>Heading</h2>
-        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-        <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
-      </div>
-      <div class="col-md-4">
-        <h2>Heading</h2>
-        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-        <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
-      </div>
-      <div class="col-md-4">
-        <h2>Heading</h2>
-        <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-        <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
-      </div> -->
-    </div>
-
-    <hr>
-
-  </div> <!-- /container -->
 
 </main>
 

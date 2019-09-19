@@ -135,7 +135,7 @@ def start():
 	listener = Streamlistener(api = api)
 	stream = tweepy.Stream(auth, listener = listener)
 
-	track = ['modi','tamil']
+	track = ['trump','nasa']
 	#track = ['nba', 'cavs', 'celtics', 'basketball']
 	# choose what we want to filter by
 	stream.filter(track = track, languages = ['en'])
