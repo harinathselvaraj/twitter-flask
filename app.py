@@ -3,6 +3,7 @@ import pandas as pd
 from sqlalchemy import create_engine
 import numpy as np
 import pymysql
+import TwitterMySQLserver
 # import datetime
 # import matplotlib.pyplot as plt
 # import seaborn as sns
@@ -21,6 +22,9 @@ def default():
 def hello():
    return "Hello from my web application."
 
+@app.route('/start')
+def start():
+   return TwitterMySQLserver
 
 def get_data():
     engine = create_engine("mysql+pymysql://twitterusr:twitterpwd@321@166.62.26.1/harrytwitterdb")    
@@ -31,10 +35,11 @@ def get_data():
 
     return twitterdata
 
-@app.route("/start")
+@app.route("/data")
 def get_dataframe():
     twitterdata = get_data()
-    return twitterdata.head().to_html()
+    # return twitterdata.head().to_html()
+    return twitterdata.to_html()
 
 if __name__ == '__main__':
     app.run(debug=True)
