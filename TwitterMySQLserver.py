@@ -5,7 +5,8 @@ import json
 from dateutil import parser
 import time
 import os
-
+limit = 10
+current = 0
 consumer_key = 'Qx4adEOddt583YhzX3bxC8FD5'
 consumer_secret = 'Hvf1cix75ZD9IWAcCNY9HhADJt9FyuLqTm9KE2DouFUp0D8KaC'
 access_token = '1055619615898959877-UH48I8b7OTStEbE9P3gOOiiRDvw78H'
@@ -27,7 +28,6 @@ def connect(username, created_at, tweet, retweet_count, place , location):
 			Insert twitter data
 			"""
 			cursor = con.cursor()
-			# twitter, golf
 			query = "INSERT INTO twitterdata (username, created_at, tweet, retweet_count,place, location) VALUES (%s, %s, %s, %s, %s, %s)"
 			cursor.execute(query, (username, created_at, tweet, retweet_count, place, location))
 			con.commit()
@@ -44,8 +44,6 @@ def connect(username, created_at, tweet, retweet_count, place , location):
 
 # Tweepy class to access Twitter API
 class Streamlistener(tweepy.StreamListener):
-	
-
 	def on_connect(self):
 		print("You are connected to the Twitter API")
 
@@ -61,7 +59,7 @@ class Streamlistener(tweepy.StreamListener):
 	and extracts the data we want.
 	"""
 	def on_data(self,data):
-		
+		global current
 		try:
 			raw_data = json.loads(data)
 
@@ -84,6 +82,11 @@ class Streamlistener(tweepy.StreamListener):
 				#insert data just collected into MySQL database
 				connect(username, created_at, tweet, retweet_count, place, location)
 				print("Tweet colleted at: {} ".format(str(created_at)))
+				#Loop to stop the program
+				print(current, limit)
+				current +=1
+				if current == limit:
+					return False
 		except Error as e:
 			print(e)
 
